@@ -1,0 +1,11 @@
+nose
+Sphinx
+tox
+mock
+coverage
+pyflake
+kazoo
+python-etcd
+python-consul
+
+-e .

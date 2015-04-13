@@ -1,0 +1,10 @@
+.tox
+.coverage
+.coverage-report
+*.pyc
+*.egg-info
+/env/
+/docs/_build/
+/logs/
+/lib/
+/_*/

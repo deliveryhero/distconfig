@@ -1,0 +1,30 @@
+language: python
+
+env:
+    - TOXENV=py27
+    - TOXENV=py34
+
+before_install:
+    - sudo apt-get update
+    - sudo apt-get install zookeeper
+    - sudo apt-get install zookeeperd
+
+    - wget https://github.com/coreos/etcd/releases/download/v0.4.6/etcd-v0.4.6-linux-amd64.tar.gz
+    - tar xvf etcd-v0.4.6-linux-amd64.tar.gz
+    - pushd etcd-v0.4.6-linux-amd64/
+    - ./etcd &
+    - popd
+
+    - sudo apt-get install unzip
+    - wget https://dl.bintray.com/mitchellh/consul/0.4.1_linux_amd64.zip
+    - unzip 0.4.1_linux_amd64.zip
+    - ./consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul &
+
+install:
+  - pip install tox
+
+script:
+    - DISTCONFIG_RUN_INTEGRATION_TEST=true tox
+
+notifications:
+    email: false
