@@ -1,5 +1,5 @@
-.. image:: https://magnum.travis-ci.com/delivero/distconfig.svg?token=wB5fxppSwqGye9m86nCD
-  :target: https://magnum.travis-ci.com/delivero/distconfig
+.. image:: https://travis-ci.org/deliveryhero/distconfig.svg?branch=master
+  :target: https://travis-ci.org/deliveryhero/distconfig
 
 .. image:: https://readthedocs.org/projects/distconfig/badge/?version=latest
   :target: https://readthedocs.org/projects/distconfig/?badge=latest
@@ -79,7 +79,7 @@ To run unit test use tox ::
 
     $ tox
 
-To run integration test, we recommand you to install `docker <https://www.docker.com/>_` and then run ::
+To run integration test, we recommand you to install `docker <https://www.docker.com/>`_ and then run ::
 
     $ ./run-tests.sh
 

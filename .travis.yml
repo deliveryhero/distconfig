@@ -3,6 +3,7 @@ language: python
 env:
     - TOXENV=py27
     - TOXENV=py34
+    - TOXENV=lint
 
 before_install:
     - sudo apt-get update
