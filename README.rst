@@ -79,7 +79,7 @@ To run unit test use tox ::
 
     $ tox
 
-To run integration test, we recommand you to install `docker <https://www.docker.com/>`_ and then run ::
+To run integration test, we recommend you to install `docker <https://www.docker.com/>`_ and then run ::
 
     $ ./run-tests.sh
 
